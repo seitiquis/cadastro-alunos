@@ -1,0 +1,11 @@
+{
+  "name": "cadastro-alunos",
+  "version": "1.0.0",
+  "description": "Sistema de cadastro de alunos",
+  "main": "script.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "author": "Carlos Eduardo",
+  "license": "ISC"
+}
