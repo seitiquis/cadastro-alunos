@@ -45,3 +45,12 @@ jobs:
           context: .
           push: true
           tags: seitiquis/cadastro-alunos:latest
+
+  deploy:
+    needs: docker
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - name: Fazer deploy no Render
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
